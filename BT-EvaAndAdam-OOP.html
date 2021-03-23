@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và bóng đèn</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Apple {
+        weight;
+        constructor(weight) {
+            this.weight =weight;
+        }
+        isEmpty(check) {
+            if(this.weight > 0) {
+                check = true;
+            } else {
+                check = false;
+            }
+        }
+        getWeight() {
+            return this.weight;
+            console.log(this.weight)
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        saySomeThing(str) {
+            console.log(str)
+        }
+        eatApple(Apple) {
+            if(Apple.weight > 0) {
+                Apple.weight--;
+                this.weight++;
+                alert(Apple.weight)
+                alert(this.weight)
+            } else {
+                alert('Hết táo rồi')
+            }
+        }
+        checkWeightApple(Apple) {
+            alert('Số táo còn lại : ' +  Apple)
+        }
+        setGender() {
+            if(this.gender = 'male') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    }
+    let Tao = new Apple(10)
+    let Eva = new Human('Eva','female',50)
+    let Adam = new Human('Adam','male',60)
+    Adam.saySomeThing('Adudu')
+    Eva.saySomeThing('Nứng quá')
+    Adam.eatApple(Tao);
+    Adam.eatApple(Tao);
+    Adam.eatApple(Tao);
+    Adam.eatApple(Tao);
+    Adam.eatApple(Tao);
+    Adam.checkWeightApple(Tao.weight);
+    Eva.eatApple(Tao);
+    Eva.eatApple(Tao);
+    Eva.eatApple(Tao);
+    Eva.eatApple(Tao);
+    Eva.eatApple(Tao);
+    Eva.eatApple(Tao);
+
+</script>
